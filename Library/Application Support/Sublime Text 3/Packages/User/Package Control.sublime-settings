@@ -1,0 +1,33 @@
+{
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"Alignment",
+		"AutoFileName",
+		"BracketHighlighter",
+		"Color Highlighter",
+		"ColorPicker",
+		"DocBlockr",
+		"Emmet",
+		"Git",
+		"GitGutter",
+		"jQuery",
+		"Laravel Blade Highlighter",
+		"Markdown Preview",
+		"MarkdownEditing",
+		"PackageResourceViewer",
+		"Select Quoted",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-php",
+		"SublimeLinter-phpcs",
+		"SublimeLinter-phplint",
+		"SublimeLinter-phpmd",
+		"Tag",
+		"Theme - Soda",
+		"Theme - Spacegray",
+		"Tomorrow Color Schemes",
+		"URLEncode"
+	]
+}

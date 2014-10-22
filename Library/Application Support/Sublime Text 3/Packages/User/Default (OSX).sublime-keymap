@@ -1,0 +1,41 @@
+[
+	{ "keys": ["shift+space"], "command": "auto_complete" },
+	{ "keys": ["shift+space"], "command": "code_intel_auto_complete" },
+
+	{ "keys": ["command+shift+space"], "command": "expand_selection", "args": {"to": "scope"} },
+	{ "keys": ["shift+space"], "command": "replace_completion_with_auto_complete", "context":
+		[
+			{ "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
+			{ "key": "auto_complete_visible", "operator": "equal", "operand": false },
+			{ "key": "setting.tab_completion", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["super+alt+down"], "command": "goto_definition" },
+	{
+		"keys": ["ctrl+alt+f"], "command": "js_format",
+		"context": [{"key": "selector", "operator": "equal", "operand": "source.js,source.json"}]
+	},
+	{
+		"keys": [
+			"command+e"
+		], 
+		"args": {
+			"action": "expand_abbreviation"
+		}, 
+		"command": "run_emmet_action", 
+		"context": [
+			{
+				"key": "emmet_action_enabled.expand_abbreviation"
+			}
+		]
+	},
+
+	{ "keys": ["ctrl+e"], "command": "move_to", "args": { "to": "hardeol" } },
+	{ "keys": ["super+shift+a"], "command": "alignment" },
+	{ "keys": ["shift+space"], "command": "code_intel_auto_complete" },
+	{ "keys": ["super+t"], "command": "expand_selection", "args": {"to": "tag"} },
+	{ "keys": ["super+9"], "command": "expand_selection", "args": {"to": "brackets"} },
+	{ "keys": ["super+b"], "command": "toggle_side_bar" },
+	{ "keys": ["alt+p"], "command": "expand_selection_to_paragraph" }
+
+]
