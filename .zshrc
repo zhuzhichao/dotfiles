@@ -91,6 +91,8 @@ alias mysqlstop="mysql.server stop"
 alias nginxstart="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist"
 alias nginxstop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist"
 
+alias gfw="curl -s http://tx.txthinking.com/fuckGFW.py | sudo python"
+
 ############命令行直接打开扩展
 unalias mysql
 alias -s html=subl
@@ -133,7 +135,7 @@ alias artsian='php artisan'
 alias cpdump='composer dumpautoload'
 
 
-alias goagent='sudo python /Users/zhuzhichao/Dropbox/tools/goagent-3.1.18/local/proxy.py'
+alias goagent='sudo python /Users/zhuzhichao/Dropbox/tools/goagent-3.2.0/local/proxy.py'
 
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 
