@@ -68,6 +68,7 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 alias zshrc='subl ~/.zshrc'
+alias phpt='subl ~/wwwroot/t.php'
 
 alias cls='clear'
 alias ll='ls -l'
@@ -142,3 +143,4 @@ alias goagent='sudo python /Users/zhuzhichao/Dropbox/tools/goagent-3.2.0/local/p
 export PATH=/Applications/android-sdk-macosx/tools/:/Applications/android-sdk-macosx/platform-tools:$PATH
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
+export VAGRANT_DEFAULT_PROVIDER=parallels
