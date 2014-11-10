@@ -9,8 +9,8 @@
 	"font_size": 16,
 	"ignored_packages":
 	[
-		"Vintage",
 		"Color Highlighter",
+		"Vintage",
 		"Markdown"
 	],
 	"indent_guide_options":
