@@ -80,7 +80,7 @@ alias grep="grep --color=auto"
 alias ctagsphp="ctags -R --fields=+aimS --languages=php"
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''   #树状列出文件
 alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 30'	#显示用的最多的命令
-
+alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
 
 alias fpmstart="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php55.plist"
@@ -93,6 +93,8 @@ alias nginxstart="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.p
 alias nginxstop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist"
 
 alias gfw="curl -s http://tx.txthinking.com/fuckGFW.py | sudo python"
+
+alias sshlol='ssh root@192.168.1.181'
 
 ############命令行直接打开扩展
 unalias mysql
@@ -134,6 +136,7 @@ alias artro='php artisan route'
 alias artmr='php artisan migrate:rollback'
 alias artsian='php artisan'
 alias cpdump='composer dumpautoload'
+alias bigcomposer='php -d memory_limit=-1 /usr/local/Cellar/composer/1.0.0-alpha8/libexec/composer.phar'
 
 
 alias goagent='sudo python /Users/zhuzhichao/Dropbox/tools/goagent-3.2.0/local/proxy.py'
