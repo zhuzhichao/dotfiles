@@ -135,7 +135,6 @@ imap jj <esc>
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 
 "easier window navigation
-
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
@@ -146,8 +145,6 @@ nmap <C-v> :vertical resize +5<cr>
 nmap 25 :vertical resize 40<cr>
 nmap 50 <c-w>=
 nmap 75 :vertical resize 120<cr>
-
-nmap <C-b> :NERDTreeToggle<cr>
 
 "Load the current buffer in Chrome
 nmap ,c :!open -a Google\ Chrome<cr>
@@ -187,7 +184,7 @@ nmap ,todo :e todo.txt<cr>
 
 " Laravel framework commons
 nmap <leader>lr :e app/routes.php<cr>
-nmap <leader>lca :e app/config/app.php<cr>81Gf(%O
+nmap <leader>lca :e app/config/app.php<cr>
 nmap <leader>lcd :e app/config/database.php<cr>
 nmap <leader>lc :e composer.json<cr>
 
@@ -195,11 +192,11 @@ nmap <leader>lc :e composer.json<cr>
 function! FacadeLookup()
     let facade = input('Facade Name: ')
     let classes = {
-\       'Form': 'Html/FormBuilder.php',
-\       'Html': 'Html/HtmlBuilder.php',
-\       'File': 'Filesystem/Filesystem.php',
-\       'Eloquent': 'Database/Eloquent/Model.php'
-\   }
+        'Form': 'Html/FormBuilder.php',
+        'Html': 'Html/HtmlBuilder.php',
+        'File': 'Filesystem/Filesystem.php',
+        'Eloquent': 'Database/Eloquent/Model.php'
+    }
 
     execute ":edit vendor/laravel/framework/src/Illuminate/" . classes[facade]
 endfunction
@@ -244,7 +241,7 @@ let g:snips_author="zhuzhichao"
 
 "
 """IndentGuides
-let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_enable_on_vim_startup = 0
 
 """airline
 let g:airline#extensions#tabline#enabled = 1
@@ -404,10 +401,10 @@ let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 " other keybindings for plugin toggle
-nmap <F5> :TagbarToggle<CR>
-nmap <F2> :NERDTreeToggle<cr>
-nmap <F3> :GundoToggle<cr>
-nmap <F4> :IndentGuidesToggle<cr>
+map <c-r> :TagbarToggle<CR>
+nmap <c-space> :NERDTreeToggle<cr>
+nmap <c-m> :GundoToggle<cr>
+nmap <c-t> :IndentGuidesToggle<cr>
 
 
 "------------------
