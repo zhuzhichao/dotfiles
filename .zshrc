@@ -83,8 +83,10 @@ alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 
 alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
 
-alias fpmstart="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php55.plist"
-alias fpmstop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php55.plist"
+#alias fpmstart="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php55.plist"
+#alias fpmstop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php55.plist"
+alias phpstart="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.php54.plist"
+alias phpstop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.php54.plist"
 
 alias mysqlstart="mysql.server start"
 alias mysqlstop="mysql.server stop"
@@ -96,6 +98,7 @@ alias gfw="curl -s http://tx.txthinking.com/fuckGFW.py | sudo python"
 
 alias sshlol='ssh root@192.168.1.181'
 
+alias zshreload='source ~/.zshrc'
 ############命令行直接打开扩展
 unalias mysql
 alias -s html=subl
@@ -143,7 +146,10 @@ alias goagent='sudo python /Users/zhuzhichao/Dropbox/tools/goagent-3.2.0/local/p
 
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 
-export PATH=/Applications/android-sdk-macosx/tools/:/Applications/android-sdk-macosx/platform-tools:$PATH
+export PATH=/Applications/android-sdk-macosx/tools:/Applications/android-sdk-macosx/platform-tools:$PATH
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 export VAGRANT_DEFAULT_PROVIDER=parallels
+export HOMEBREW_GITHUB_API_TOKEN=2ba87d71d064066f7f1187d18410ca1c2e3e17d8
+
+export PATH="$(brew --prefix homebrew/php/php54)/bin:$PATH"

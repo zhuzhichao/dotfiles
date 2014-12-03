@@ -402,7 +402,7 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 " other keybindings for plugin toggle
 map <c-r> :TagbarToggle<CR>
-nmap <c-space> :NERDTreeToggle<cr>
+nmap <D-B> :NERDTreeToggle<cr>
 nmap <c-m> :GundoToggle<cr>
 nmap <c-t> :IndentGuidesToggle<cr>
 
