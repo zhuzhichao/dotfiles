@@ -9,9 +9,11 @@
 	"font_size": 15,
 	"ignored_packages":
 	[
-		"Color Highlighter",
 		"Markdown",
-		"Vintage"
+		"Color Highlighter",
+		"SublimeLinter",
+		"Vintage",
+		"jQuery"
 	],
 	"indent_guide_options":
 	[
