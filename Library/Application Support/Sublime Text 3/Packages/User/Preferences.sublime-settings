@@ -10,10 +10,8 @@
 	"ignored_packages":
 	[
 		"Markdown",
-		"Color Highlighter",
-		"SublimeLinter",
 		"Vintage",
-		"jQuery"
+		"Color Highlighter"
 	],
 	"indent_guide_options":
 	[
