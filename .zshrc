@@ -146,7 +146,7 @@ alias goagent='sudo python /Users/zhuzhichao/Dropbox/tools/goagent-3.2.0/local/p
 
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 
-export PATH=/Applications/android-sdk-macosx/tools:/Applications/android-sdk-macosx/platform-tools:$PATH
+export PATH=~/.composer/vendor/bin:/Applications/android-sdk-macosx/tools:/Applications/android-sdk-macosx/platform-tools:$PATH
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 export VAGRANT_DEFAULT_PROVIDER=parallels
