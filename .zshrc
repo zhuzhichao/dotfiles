@@ -99,6 +99,8 @@ alias gfw="curl -s http://tx.txthinking.com/fuckGFW.py | sudo python"
 alias sshlol='ssh root@192.168.1.181'
 
 alias zshreload='source ~/.zshrc'
+
+alias tolf='find ./ -type f -exec dos2unix {} \;'
 ############命令行直接打开扩展
 unalias mysql
 alias -s html=subl
