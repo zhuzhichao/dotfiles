@@ -98,9 +98,12 @@ alias gfw="curl -s http://tx.txthinking.com/fuckGFW.py | sudo python"
 
 alias sshlol='ssh root@192.168.1.181'
 
+alias vm="ssh vagrant@127.0.0.1 -p 2222"
+
 alias zshreload='source ~/.zshrc'
 
 alias tolf='find ./ -type f -exec dos2unix {} \;'
+
 ############命令行直接打开扩展
 unalias mysql
 alias -s html=subl
@@ -134,15 +137,20 @@ alias ngreload='sudo nginx -s reload'
 #Mysql
 #alias mysql-start
 
+#############服务器连接
+#LMA
+alias lma1='ssh shinetech@185.3.164.230'
+alias lma2='ssh shinetech@185.3.164.63'
+
 ############Laravel 操作
-alias artmk='php artisan migrate:make'
 alias artmi='php artisan migrate'
-alias artro='php artisan route'
-alias artmr='php artisan migrate:rollback'
+alias artrl='php artisan route:list'
+alias artmr='php artisan migrate:refresh'
 alias artsian='php artisan'
 alias cpdump='composer dumpautoload'
 alias bigcomposer='php -d memory_limit=-1 /usr/local/Cellar/composer/1.0.0-alpha8/libexec/composer.phar'
-
+alias homeup='homestead up'
+alias homereload='homestead provision'
 
 alias goagent='sudo python /Users/zhuzhichao/Dropbox/tools/goagent-3.2.0/local/proxy.py'
 
@@ -151,7 +159,6 @@ alias goagent='sudo python /Users/zhuzhichao/Dropbox/tools/goagent-3.2.0/local/p
 export PATH=~/.composer/vendor/bin:/Applications/android-sdk-macosx/tools:/Applications/android-sdk-macosx/platform-tools:$PATH
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
-export VAGRANT_DEFAULT_PROVIDER=parallels
 export HOMEBREW_GITHUB_API_TOKEN=2ba87d71d064066f7f1187d18410ca1c2e3e17d8
 
 export PATH="$(brew --prefix homebrew/php/php54)/bin:$PATH"
