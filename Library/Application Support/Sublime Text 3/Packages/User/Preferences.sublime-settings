@@ -1,27 +1,34 @@
 {
-	"color_scheme": "Packages/User/SublimeLinter/Solarized (Light) (SL).tmTheme",
+	"color_inactive_tabs": true,
+	"color_scheme": "Packages/Theme - Afterglow/Afterglow.tmTheme",
 	"detect_indentation": true,
 	"drag_text": false,
 	"draw_indent_guides": false,
 	"draw_white_space": "selection",
 	"find_selected_text": true,
+	"folder_no_icon": true,
 	"font_face": "Menlo",
 	"font_size": 15,
 	"ignored_packages":
 	[
+		"Vintage",
 		"Color Highlighter",
-		"Markdown",
-		"Vintage"
+		"AutoFileName",
+		"Markdown"
 	],
 	"indent_guide_options":
 	[
 		"draw_active"
 	],
-	"line_padding_top": 11,
+	"line_padding_top": 10,
 	"move_to_limit_on_up_down": false,
 	"open_files_in_new_window": false,
 	"scroll_past_end": true,
 	"show_full_path": true,
-	"show_tab_close_buttons": false,
-	"theme": "Soda Light 3.sublime-theme"
+	"show_tab_close_buttons": true,
+	"sidebar_row_padding_medium": true,
+	"sidebar_size_14": true,
+	"tabs_padding_medium": true,
+	"tabs_small": true,
+	"theme": "Afterglow-blue.sublime-theme"
 }
