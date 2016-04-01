@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="cloud"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -68,8 +68,10 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 alias zshrc='subl ~/.zshrc'
+alias zshreload='source ~/.zshrc'
 alias phpt='subl ~/wwwroot/t.php'
 
+alias v='mvim'
 alias cls='clear'
 alias ll='ls -l'
 alias la='ls -a'
@@ -82,26 +84,6 @@ alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\
 alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 30'	#显示用的最多的命令
 alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
-
-alias fpmstart="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php55.plist"
-alias fpmstop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php55.plist"
-#alias phpstart="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.php55.plist"
-#alias phpstop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.php55.plist"
-
-alias mysqlstart="mysql.server start"
-alias mysqlstop="mysql.server stop"
-
-alias nginxstart="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist"
-alias nginxstop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist"
-
-alias gfw="curl -s http://tx.txthinking.com/fuckGFW.py | sudo python"
-
-alias sshlol='ssh root@192.168.1.181'
-
-alias vm="ssh vagrant@127.0.0.1 -p 2222"
-
-alias zshreload='source ~/.zshrc'
-
 alias tolf='find ./ -type f -exec dos2unix {} \;'
 
 ############命令行直接打开扩展
@@ -136,11 +118,28 @@ alias ngstop='sudo nginx -s stop'
 alias ngreload='sudo nginx -s reload'
 #Mysql
 #alias mysql-start
+alias fpmstart="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php56.plist"
+alias fpmstop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php56.plist"
+alias mysqlstart="mysql.server start"
+alias mysqlstop="mysql.server stop"
+alias fpmrestart="fpmstop && fpmstart"
+alias mysqlrestart="mysqlstop && mysqlstart"
+
+#############Vagrant
+alias vm="ssh vagrant@127.0.0.1 -p 2222"
+alias vag-start="cd ~/Homestead && vagrant up"
+alias vag-reload="cd ~/Homestead && vagrant provision"
+alias homestead-edit="subl ~/.homestead/Homestead.yaml"
 
 #############服务器连接
 #LMA
 alias lma1='ssh shinetech@185.3.164.230'
 alias lma2='ssh shinetech@185.3.164.63'
+alias vc='ssh shinetech_dev_qa@120.24.251.232 -p 12322'
+alias vcl='ssh weiclicai_live_www@120.25.144.208 -p 12322'
+alias cms="ssh root@120.55.73.216 -p 10022"
+alias etp="ssh etp@115.29.207.117"
+alias etpl="ssh etp@123.56.186.44"
 
 ############Laravel 操作
 alias artmi='php artisan migrate'
@@ -152,15 +151,27 @@ alias cpdump='composer dumpautoload'
 alias bigcomposer='php -d memory_limit=-1 /usr/local/Cellar/composer/1.0.0-alpha8/libexec/composer.phar'
 alias homeup='homestead up'
 alias homereload='homestead provision'
-alias artro="artmr && artdb"
+alias artrs="artmr && artdb"
+alias artro="php artisan migrate:rollback"
+alias make-migration="php artisan make:migration"
+alias make-controller="php artisan make:controller"
+alias make-request="php artisan make:request"
+alias make-job="php artisan make:job"
+alias make-console="php artisan make:console"
+alias make-request="php artisan make:request"
+alias make-middleware="php artisan make:middleware"
+alias clockwork-clean="php artisan clockwork:clean"
+alias tinker="php artisan tinker"
+alias event-generate="php artisan event:generate"
 
-alias goagent='sudo python /Users/zhuzhichao/Dropbox/tools/goagent-3.2.0/local/proxy.py'
 
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 
+# export http_proxy=http://jp2.dig.name:25
+# export https_proxy=http://jp2.dig.name:25
 export PATH=~/.composer/vendor/bin:/Applications/android-sdk-macosx/tools:/Applications/android-sdk-macosx/platform-tools:$PATH
-export LC_ALL=en_US.UTF-8  
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-export HOMEBREW_GITHUB_API_TOKEN=2ba87d71d064066f7f1187d18410ca1c2e3e17d8
-
+export HOMEBREW_GITHUB_API_TOKEN=d4b287843e860c2149ecef885584564e6bce81a4
 export PATH="$(brew --prefix homebrew/php/php54)/bin:$PATH"
+export PATH="/opt/vagrant/bin:/Users/zhuzhichao/Applications/mongodb/mongodb-osx-x86_64-3.0.3/bin:$PATH"

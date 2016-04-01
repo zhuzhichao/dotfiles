@@ -1,6 +1,8 @@
 {
+	"always_show_minimap_viewport": true,
+	"bold_folder_labels": true,
 	"color_inactive_tabs": true,
-	"color_scheme": "Packages/Theme - Afterglow/Afterglow.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Monokai-Soft-MD (SL).tmTheme",
 	"detect_indentation": true,
 	"drag_text": false,
 	"draw_indent_guides": false,
@@ -11,24 +13,30 @@
 	"font_size": 15,
 	"ignored_packages":
 	[
-		"Vintage",
-		"Color Highlighter",
 		"AutoFileName",
-		"Markdown"
+		"Color Highlighter",
+		"Markdown",
+		"Vintage"
 	],
 	"indent_guide_options":
 	[
 		"draw_active"
 	],
+	"line_numbers": false,
+	"line_padding_bottom": 3,
 	"line_padding_top": 10,
+	"margin": 0,
 	"move_to_limit_on_up_down": false,
 	"open_files_in_new_window": false,
+	"overlay_scroll_bars": "enabled",
 	"scroll_past_end": true,
 	"show_full_path": true,
+	"show_panel_on_build": false,
 	"show_tab_close_buttons": true,
 	"sidebar_row_padding_medium": true,
 	"sidebar_size_14": true,
 	"tabs_padding_medium": true,
 	"tabs_small": true,
-	"theme": "Afterglow-blue.sublime-theme"
+	"theme": "Material-Theme.sublime-theme",
+	"update_check": false
 }

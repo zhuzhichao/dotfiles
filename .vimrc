@@ -10,7 +10,7 @@ map <silent> <leader>ss :source ~/.vimrc<cr>
 "Fast editing of .vimrc
 map <silent> <leader>ee :e ~/.vimrc<cr>
 "When .vimrc is edited, reload it
-autocmd! bufwritepost .vimrc source ~/.vimrc
+"autocmd! bufwritepost .vimrc source ~/.vimrc
 
 
 "----
@@ -18,7 +18,7 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 "----
 source ~/.vim/plugin.vim
 " encoding dectection
-set fileencoding=utf-8
+"set fileencoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 " enable filetype dectection and ft specific plugin/indent
 call vundle#end()            " required
@@ -42,8 +42,8 @@ set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
 
 " For showmarks plugin
-hi ShowMarksHLl ctermbg=Yellow   ctermfg=Black  guibg=#FFDB72    guifg=Black
-hi ShowMarksHLu ctermbg=Magenta  ctermfg=Black  guibg=#FFB3FF    guifg=Black
+"hi ShowMarksHLl ctermbg=Yellow   ctermfg=Black  guibg=#FFDB72    guifg=Black
+"hi ShowMarksHLu ctermbg=Magenta  ctermfg=Black  guibg=#FFB3FF    guifg=Black
 
 " highlight current line
 "au WinLeave * set nocursorline nocursorcolumn
@@ -65,7 +65,8 @@ set mouse=a                                                       " use mouse in
 set report=0                                                      " always report number of lines changed                "
 set nowrap                                                        " dont wrap lines
 set scrolloff=5                                                   " 5 lines above/below cursor when scrolling
-set number                                                        " show line numbers
+"set number                                                        " show line numbers
+set relativenumber
 set showmatch                                                     " show matching bracket (briefly jump)
 set showcmd                                                       " show typed command in status bar
 set title                                                         " show file in titlebar
@@ -279,9 +280,9 @@ let g:EasyMotion_smartcase = 1
 let g:EasyMotion_use_smartsign_us = 1
 let g:EasyMotion_leader_key = '<Leader>'
 """ youdao translate
-vnoremap <silent> <C-T> <Esc>:Ydv<CR>
-nnoremap <silent> <C-T> <Esc>:Ydc<CR>
-noremap <leader>yd :Yde<CR>
+"vnoremap <silent> <C-T> <Esc>:Ydv<CR>
+"nnoremap <silent> <C-T> <Esc>:Ydc<CR>
+"noremap <leader>yd :Yde<CR>
 
 
 """gitgutter
@@ -386,23 +387,21 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-"autocmd FileType php setlocal omnifunc=phpcomplate#CompletePhp
 
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
 endif
-let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+"let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 "let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 "let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-
 " other keybindings for plugin toggle
 map <c-r> :TagbarToggle<CR>
-nmap <D-B> :NERDTreeToggle<cr>
+nmap <c-k> :NERDTreeToggle<CR>
 nmap <c-m> :GundoToggle<cr>
 nmap <c-t> :IndentGuidesToggle<cr>
 
@@ -410,75 +409,3 @@ nmap <c-t> :IndentGuidesToggle<cr>
 "------------------
 " Useful Functions
 "------------------
-"
-
-
-" Turn persistent undo on
-"    means that you can undo even when you close a buffer/VIM
-try
-    set undodir=~/.vim/temp_dirs/undodir
-    set undofile
-catch
-endtry
-
-
-" Platform
-function! MySys()
-  if has("win32")
-    return "windows"
-else
-    return "linux"
-  endif
-endfunction
-
-function! SwitchToBuf(filename)
-    "let fullfn = substitute(a:filename, "^\\~/", $HOME . "/", "")
-    " find in current tab
-    let bufwinnr = bufwinnr(a:filename)
-    if bufwinnr != -1
-        exec bufwinnr . "wincmd w"
-        return
-    else
-        " find in each tab
-        tabfirst
-        let tab = 1
-        while tab <= tabpagenr("$")
-            let bufwinnr = bufwinnr(a:filename)
-            if bufwinnr != -1
-                exec "normal " . tab . "gt"
-                exec bufwinnr . "wincmd w"
-                return
-            endif
-            tabnext
-            let tab = tab + 1
-        endwhile
-        " not exist, new tab
-        exec "tabnew " . a:filename
-    endif
-endfunction
-
-"Fast edit vimrc
-if MySys() == 'linux'
-    "Fast reloading of the .vimrc
-    map <silent> <leader>ss :source ~/.vimrc<cr>
-    "Fast editing of .vimrc
-    map <silent> <leader>ee :call SwitchToBuf("~/.vimrc")<cr>
-    "When .vimrc is edited, reload it
-    autocmd! bufwritepost .vimrc source ~/.vimrc
-elseif MySys() == 'windows'
-    " Set helplang
-    set helplang=cn
-    "Fast reloading of the _vimrc
-    map <silent> <leader>ss :source ~/_vimrc<cr>
-    "Fast editing of _vimrc
-    map <silent> <leader>ee :call SwitchToBuf("~/_vimrc")<cr>
-    "When _vimrc is edited, reload it
-    autocmd! bufwritepost _vimrc source ~/_vimrc
-endif
-
-
-" For windows version
-if MySys() == 'windows'
-    source $VIMRUNTIME/mswin.vim
-    behave mswin
-endif 
