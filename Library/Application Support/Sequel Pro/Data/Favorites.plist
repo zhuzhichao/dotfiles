@@ -227,6 +227,50 @@
 						<key>user</key>
 						<string>root</string>
 					</dict>
+					<dict>
+						<key>colorIndex</key>
+						<integer>-1</integer>
+						<key>database</key>
+						<string>fx-erp</string>
+						<key>host</key>
+						<string>127.0.0.1</string>
+						<key>id</key>
+						<integer>-5658436140281480335</integer>
+						<key>name</key>
+						<string>房信 ERP</string>
+						<key>port</key>
+						<string></string>
+						<key>socket</key>
+						<string></string>
+						<key>sshHost</key>
+						<string></string>
+						<key>sshKeyLocation</key>
+						<string></string>
+						<key>sshKeyLocationEnabled</key>
+						<integer>0</integer>
+						<key>sshPort</key>
+						<string></string>
+						<key>sshUser</key>
+						<string></string>
+						<key>sslCACertFileLocation</key>
+						<string></string>
+						<key>sslCACertFileLocationEnabled</key>
+						<integer>0</integer>
+						<key>sslCertificateFileLocation</key>
+						<string></string>
+						<key>sslCertificateFileLocationEnabled</key>
+						<integer>0</integer>
+						<key>sslKeyFileLocation</key>
+						<string></string>
+						<key>sslKeyFileLocationEnabled</key>
+						<integer>0</integer>
+						<key>type</key>
+						<integer>0</integer>
+						<key>useSSL</key>
+						<integer>0</integer>
+						<key>user</key>
+						<string>root</string>
+					</dict>
 				</array>
 				<key>IsExpanded</key>
 				<true/>
@@ -238,27 +282,21 @@
 				<array>
 					<dict>
 						<key>colorIndex</key>
-						<integer>-1</integer>
-						<key>database</key>
-						<string>etp_dev</string>
+						<integer>2</integer>
 						<key>host</key>
 						<string>127.0.0.1</string>
 						<key>id</key>
 						<integer>4320322845176055154</integer>
 						<key>name</key>
 						<string>易通安达 dev</string>
-						<key>port</key>
-						<string></string>
 						<key>socket</key>
 						<string></string>
 						<key>sshHost</key>
-						<string>115.29.207.117</string>
+						<string>123.56.186.44</string>
 						<key>sshKeyLocation</key>
 						<string></string>
 						<key>sshKeyLocationEnabled</key>
 						<integer>0</integer>
-						<key>sshPort</key>
-						<string></string>
 						<key>sshUser</key>
 						<string>etp</string>
 						<key>sslCACertFileLocation</key>
@@ -278,11 +316,11 @@
 						<key>useSSL</key>
 						<integer>0</integer>
 						<key>user</key>
-						<string>etp_dev</string>
+						<string>root</string>
 					</dict>
 					<dict>
 						<key>colorIndex</key>
-						<integer>-1</integer>
+						<integer>1</integer>
 						<key>database</key>
 						<string>c1_wclc_qa</string>
 						<key>host</key>
@@ -325,6 +363,8 @@
 						<string>c1_wclc_qa</string>
 					</dict>
 					<dict>
+						<key>colorIndex</key>
+						<integer>0</integer>
 						<key>database</key>
 						<string>c1_wclc_live</string>
 						<key>host</key>
@@ -368,7 +408,7 @@
 					</dict>
 					<dict>
 						<key>colorIndex</key>
-						<integer>-1</integer>
+						<integer>2</integer>
 						<key>database</key>
 						<string></string>
 						<key>host</key>
@@ -412,7 +452,7 @@
 					</dict>
 					<dict>
 						<key>colorIndex</key>
-						<integer>-1</integer>
+						<integer>1</integer>
 						<key>database</key>
 						<string>etp</string>
 						<key>host</key>
@@ -453,6 +493,94 @@
 						<integer>0</integer>
 						<key>user</key>
 						<string>etp</string>
+					</dict>
+					<dict>
+						<key>colorIndex</key>
+						<integer>3</integer>
+						<key>database</key>
+						<string>www-fx-com</string>
+						<key>host</key>
+						<string>127.0.0.1</string>
+						<key>id</key>
+						<integer>-5121683345837191801</integer>
+						<key>name</key>
+						<string>房信</string>
+						<key>port</key>
+						<string></string>
+						<key>socket</key>
+						<string></string>
+						<key>sshHost</key>
+						<string>101.201.73.179</string>
+						<key>sshKeyLocation</key>
+						<string></string>
+						<key>sshKeyLocationEnabled</key>
+						<integer>0</integer>
+						<key>sshPort</key>
+						<string></string>
+						<key>sshUser</key>
+						<string>www-fx-com</string>
+						<key>sslCACertFileLocation</key>
+						<string></string>
+						<key>sslCACertFileLocationEnabled</key>
+						<integer>0</integer>
+						<key>sslCertificateFileLocation</key>
+						<string></string>
+						<key>sslCertificateFileLocationEnabled</key>
+						<integer>0</integer>
+						<key>sslKeyFileLocation</key>
+						<string></string>
+						<key>sslKeyFileLocationEnabled</key>
+						<integer>0</integer>
+						<key>type</key>
+						<integer>2</integer>
+						<key>useSSL</key>
+						<integer>0</integer>
+						<key>user</key>
+						<string>www-fx-com</string>
+					</dict>
+					<dict>
+						<key>colorIndex</key>
+						<integer>3</integer>
+						<key>database</key>
+						<string>erp-fx-com</string>
+						<key>host</key>
+						<string>127.0.0.1</string>
+						<key>id</key>
+						<integer>7307864117600814717</integer>
+						<key>name</key>
+						<string>房信 ERP</string>
+						<key>port</key>
+						<string></string>
+						<key>socket</key>
+						<string></string>
+						<key>sshHost</key>
+						<string>101.201.73.179</string>
+						<key>sshKeyLocation</key>
+						<string></string>
+						<key>sshKeyLocationEnabled</key>
+						<integer>0</integer>
+						<key>sshPort</key>
+						<string></string>
+						<key>sshUser</key>
+						<string>erp-fx-com</string>
+						<key>sslCACertFileLocation</key>
+						<string></string>
+						<key>sslCACertFileLocationEnabled</key>
+						<integer>0</integer>
+						<key>sslCertificateFileLocation</key>
+						<string></string>
+						<key>sslCertificateFileLocationEnabled</key>
+						<integer>0</integer>
+						<key>sslKeyFileLocation</key>
+						<string></string>
+						<key>sslKeyFileLocationEnabled</key>
+						<integer>0</integer>
+						<key>type</key>
+						<integer>2</integer>
+						<key>useSSL</key>
+						<integer>0</integer>
+						<key>user</key>
+						<string>erp-fx-com</string>
 					</dict>
 				</array>
 				<key>IsExpanded</key>

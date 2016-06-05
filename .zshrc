@@ -140,6 +140,8 @@ alias vcl='ssh weiclicai_live_www@120.25.144.208 -p 12322'
 alias cms="ssh root@120.55.73.216 -p 10022"
 alias etp="ssh etp@115.29.207.117"
 alias etpl="ssh etp@123.56.186.44"
+alias fx="ssh root@101.201.73.179"
+alias fxe="ssh erp-fx-com@101.201.73.179"
 
 ############Laravel 操作
 alias artmi='php artisan migrate'
@@ -167,8 +169,8 @@ alias event-generate="php artisan event:generate"
 
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 
-# export http_proxy=http://jp2.dig.name:25
-# export https_proxy=http://jp2.dig.name:25
+# export http_proxy=socks://127.0.0.1:8016
+# export https_proxy=socks://127.0.0.1:8016
 export PATH=~/.composer/vendor/bin:/Applications/android-sdk-macosx/tools:/Applications/android-sdk-macosx/platform-tools:$PATH
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8

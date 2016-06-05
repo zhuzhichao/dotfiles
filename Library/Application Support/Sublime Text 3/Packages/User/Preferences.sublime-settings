@@ -2,7 +2,7 @@
 	"always_show_minimap_viewport": true,
 	"bold_folder_labels": true,
 	"color_inactive_tabs": true,
-	"color_scheme": "Packages/User/SublimeLinter/Monokai-Soft-MD (SL).tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"detect_indentation": true,
 	"drag_text": false,
 	"draw_indent_guides": false,
@@ -16,13 +16,15 @@
 		"AutoFileName",
 		"Color Highlighter",
 		"Markdown",
+		"Markdown Extended",
+		"Markdown Preview",
+		"MarkdownEditing",
 		"Vintage"
 	],
 	"indent_guide_options":
 	[
 		"draw_active"
 	],
-	"line_numbers": false,
 	"line_padding_bottom": 3,
 	"line_padding_top": 10,
 	"margin": 0,
@@ -38,5 +40,6 @@
 	"tabs_padding_medium": true,
 	"tabs_small": true,
 	"theme": "Material-Theme.sublime-theme",
-	"update_check": false
+	"update_check": false,
+	"use_simple_full_screen": true
 }
